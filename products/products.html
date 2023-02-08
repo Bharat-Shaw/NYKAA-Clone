@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/f92bbc8b02.js" crossorigin="anonymous"></script>
+    <style>
+        #mainLogo {
+            width: 80px;
+            position: absolute;
+            margin-left: 10px;
+        }
+        nav {
+            width: 100%;
+        }
+        ul {
+            padding: 0;
+            margin: 0 0 0 150px;
+            list-style: none;
+        }
+        li {
+            float: left;
+        }
+        nav a {
+            display: block;
+            padding: 20px 15px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        #rightnav {
+            display: flex;
+            padding: 20px;
+            justify-content: flex-end;
+            margin: 20px;
+        }
+        #icon {
+            margin-left: 20px;
+        }
+        #parent{
+            display: flex;
+        }
+        .menu{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            width: 30%;
+            height:30px;
+        }
+        .menu>*{
+            padding: 10px;
+            border-color: lightsteelblue;
+            border-radius: 5px;
+        }
+        #data{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        #data> div{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 20px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+        #data > div > p{
+            color: grey;
+            font-size: small;
+        }
+        #data button{
+            border: grey;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            }
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="mainLogo"
+            src="data:image/png;base64,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"
+            alt="Nykaa-logo">
+        <nav>
+            <ul>
+                <li><a href="">Categories</a></li>
+                <li><a href="">Brands</a></li>
+                <li><a href="">Luxe</a></li>
+                <li><a href="">Nykaa Fashion</a></li>
+                <li><a href="">Beauty Advice</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="rightnav">
+        <div>
+            <input type="text" placeholder="Search on Nykaa">
+        </div>
+        <div id="icon">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </div>
+    <h3>All Products</h3>
+    <div id="parent">
+        <div class="menu">
+            <select id="brands">
+                <option value="">Brands</option>
+                <option value="olay">Olay</option>
+                <option value="mamaearth">Mamaearth</option>
+                <option value="lakme">Lakme</option>
+                <option value="ponds">Ponds</option>
+                <option value="wow">Wow</option>
+            </select>
+            <select id="skin">
+                <option value="">Skin Type</option>
+                <option value="dry">Dry</option>
+                <option value="oily">Oily</option>
+                <option value="sensitive">Sensitive</option>
+                <option value="normal">Normal</option>
+                <option value="combination">Combination</option>
+            </select>
+            <select id="gender">
+                <option value="">Gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="boy">Boy</option>
+                <option value="girl">Girl</option>
+                <option value="unisex">Unisex</option>
+            </select>
+        </div>
+        <div id="data">
+
+        </div>
+    </div>
+</body>
+<script>
+    var products = [
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/2/52af2b4LAKME00000132_1.jpg",
+            name: "Lakme 9To%5 Vitamin C+ Day Cream",
+            price: "MRP ₹244"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/a/8a541fbDOTKE00000054-1.jpg",
+            name: "Dot & Key Vitamin C + E Super Bright Moisturizer",
+            price: "MRP ₹387"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/6/968f1d98904417301762_1.jpg",
+            name: "Mamaearth Vitamin C Daily Glow Face Cream With Vitamin",
+            price: "MRP ₹209"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/8/98a93ef8904245710941_1.jpg",
+            name: "Nykaa So Creme! Creamy Matte Lipstick",
+            price: "MRP ₹260"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/e/ceac85d8901030561924_1.jpg",
+            name: "Lakme Lip Nude Favourites",
+            price: "MRP ₹688"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/e/9e5b3d6ETUDE00000057_1.jpg",
+            name: "ETUDE HOUSE Fixing Tint -",
+            price: "MRP 808"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/l/black-canvas_2.jpg",
+            name: "Kay Beauty Quick Dry Liquid Eyeliner",
+            price: "MRP ₹420"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/6/066c973N_8904052432975_1.jpg",
+            name: "Colorbar Waterproof Liquid Eyeliner",
+            price: "MRP ₹298"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/9/19647_h_2.jpg",
+            name: "Lakme Insta Eye Liner",
+            price: "MRP ₹126"
+        }
+    ];
+    displayProducts();
+    function displayProducts() {
+        products.map(function (elem) {
+            var divBox = document.createElement("div");
+
+            var image = document.createElement("img");
+            image.setAttribute("src", elem.image_url);
+
+            var name = document.createElement("h5");
+            name.textContent = elem.name;
+
+            var price = document.createElement("p");
+            price.textContent = elem.price;
+
+            var btn = document.createElement("button");
+            btn.textContent = "Add To Cart";
+            btn.addEventListener("click", function(){
+                addToCart(elem);
+            })
+
+            divBox.append(image, name, price, btn);
+
+            document.getElementById("data").append(divBox);
+        });
+    }
+    cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+    function addToCart(elem){
+        cartList.push(elem);
+        localStorage.setItem("cart-list", JSON.stringify(cartList));
+    }
+</script>
+
+</html>
