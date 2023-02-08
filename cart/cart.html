@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nykaa cart</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #cart-nav hr{
+            width: 45px;
+            display: inline-block;
+            margin-right: 30px;
+            margin-left: 15px;
+        }
+        #cart-nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 25% 15px 50px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #cart-nav > div{
+            display: flex;
+            justify-content: space-between;
+        }
+        #cart-nav > div >div img{
+            margin-right: 30px;
+        }
+        #cart-nav > div >div{
+            display: flex;
+            align-items: center;
+        }
+        #cart-nav > div >div a:nth-child(2){
+            padding-bottom: 5px;
+        }
+        #cart-nav a{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+        .noproduct{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            font-size: 40px;
+            color: rgb(68, 67, 67);
+        }
+        .nodis{
+            display: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="cart-nav">
+        <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg" alt="">
+        <div>
+            <div>
+                <a href="cart.html"><img id="cart-img" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg" alt=""></a>
+                <a href="cart.html">Cart</a>
+                <hr>
+            </div>
+            <div>
+                <a href="address.html"><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg" alt=""></a>
+                <a href="address.html">Address</a>
+                <hr>
+            </div>
+            <div>
+                <a href="payment.html"><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg" alt=""></a>
+                <a href="payment.html">Payment</a>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div id="body1">
+        <h4 id="body">Total Number Of Products :- <span></span></h4>
+        <div id="data"></div>
+        <div id="none">
+            <input type="text" placeholder="Enter Code" id="promoCode">
+            <button id="code">Apply Promo</button>
+            <a href="Address.html">Click here to select address</a>
+        </div>
+    </div>
+</body>
+<script>
+    window.addEventListener("load", (event) => {
+        console.log("page is fully loaded");
+        document.getElementById("cart-img").src = "https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg"; 
+    });
+
+    var items = JSON.parse(localStorage.getItem("cart")) || [];
+    if (items.length === 0) {
+        document.getElementById("body").textContent = "No Products";
+        document.getElementById("body").setAttribute("class", "noproduct");
+        document.getElementById("none").setAttribute("class", "nodis");
+        // document
+    } else {
+        displayItems();
+        totalPrice();
+        updatItem();
+    }
+
+
+    function displayItems() {
+        document.getElementById("data").textContent = "";
+        items.forEach(function (elm, idx) {
+            var div = document.createElement("div");
+            div.setAttribute("class", "mainBox");
+
+            var image = document.createElement("img");
+            image.setAttribute("src",elm.image_url);
+
+            var name = document.createElement("h5");
+            name.textContent = elm.name;
+
+            var price = document.createElement("p");
+            price.textContent = "₹ " + elm.price;
+
+            div.append(image, name, price);
+
+            var button = document.createElement("button");
+            button.textContent = "Delete";
+            button.addEventListener("click", function () {
+                deleteProduct(idx);
+            });
+            document.getElementById("data").append(div, button);
+        });
+    }
+
+    function deleteProduct(index) {  
+        items.splice(index, 1);
+        localStorage.setItem("cart",JSON.stringify(items));
+        var length = items.length;
+        
+        displayItems();
+        totalPrice();
+        updatItem();
+    }
+
+    function totalPrice() {
+        var totalPrice = items.reduce(function (acc, curr) {
+            return acc + parseInt(curr.price);
+        }, 0);
+
+        var div = document.createElement("div");
+        div.setAttribute("id", "totalprice");
+
+        var cartValue = document.createElement("h3");
+        cartValue.textContent = "Total Value";
+
+        var price = document.createElement("h4");
+        price.textContent = totalPrice;
+        price.setAttribute("id","finalValue");
+        // console.log(price.value);
+
+        div.append(cartValue, price);
+        document.getElementById("data").append(div);
+    }
+
+    function updatItem(){
+        var arr = JSON.parse(localStorage.getItem("cart"));
+        var length = arr.length;
+        document.querySelector("span").textContent = length;
+    }
+
+    document.getElementById("code").addEventListener("click",finalValue);
+    function finalValue(){
+        var codeVal = document.getElementById("promoCode").value;
+        if(codeVal === "nykaa30"){
+            var finalVal = document.getElementById("finalValue").textContent;
+            var lesspromo = parseInt(finalVal-(finalVal)*30/100);
+            document.getElementById("finalValue").textContent = lesspromo;
+
+        }
+    }
+</script>
+
+</html>
