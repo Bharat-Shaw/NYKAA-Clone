@@ -2,6 +2,7 @@
 <html>
 <head>
     <script src="https://kit.fontawesome.com/f92bbc8b02.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="2nd.css">
     <style>
         #mainLogo {
             width: 80px;
@@ -12,7 +13,7 @@
 
         #navbar {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            margin-top: 0px;
+            background-color: white;
         }
 
         nav {
@@ -35,7 +36,6 @@
             text-decoration: none;
             color: black;
         }
-
         #rightnav {
             display: flex;
             padding: 20px;
@@ -46,99 +46,8 @@
         #icon {
             margin-left: 20px;
         }
-
-        #parent {
-            display: flex;
-        }
-
-        .menu {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            margin-left: 20px;
-            margin-right: 20px;
-            margin-top: 20px;
-            width: 30%;
-            height: 30px;
-        }
-
-        .menu>* {
-            padding: 10px;
-            border-color: lightsteelblue;
-            border-radius: 5px;
-        }
-
-        #data {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        #data>div {
-            width: 95%;
-            font-size: small;
-            text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin: 20px;
-            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        #data>div>p {
-            color: grey;
-            font-size: small;
-        }
-
-        #data button {
-            border: grey;
-            border-radius: 10px;
-            padding: 10px;
-            margin-top: 20px;
-            color: crimson;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            text-align: center;
-        }
-        .footer{
-    background-color: rgb(50, 41, 41);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
-.footer>div>div>p{
-    font-size:x-small;
-    font-family: sans-serif;
-}
-#mediaLinks > div{
-    display: flex;
-    align-items: center;
-}
-#mediaLinks > div > *{
-    margin: 10px;
-}
-#appStore > div{
-    display: flex;
-    align-items: center;
-}
-#appStore > div > *{
-    margin: 10px;
-}
-#customerCare > div{
-    display: flex;
-    align-items: center;
-}
-#customerCare > div > *{
-    margin: 10px;
-}
-.footer button{
-    border: none;
-    border-radius: 5px;
-}
-#top{
-    margin-top: -16px;
-    margin-bottom: -15px;
-    display: block;
-}
     </style>
+
 </head>
 
 <body>
@@ -168,178 +77,99 @@
             </div>
         </div>
     </div>
-    <h3>All Products</h3>
-    <div id="parent">
-        <div class="menu">
-            <select id="brands">
-                <option value="">Brands</option>
-                <option value="olay">Biotique</option>
-                <option value="mamaearth">Mamaearth</option>
-                <option value="lakme">Lakme</option>
-                <option value="ponds">Colorbar</option>
-                <option value="wow">Dot & Key</option>
-            </select>
-            <select id="skin">
-                <option value="">Skin Type</option>
-                <option value="dry">Dry</option>
-                <option value="oily">Oily</option>
-                <option value="sensitive">Sensitive</option>
-                <option value="normal">Normal</option>
-                <option value="combination">Combination</option>
-            </select>
-            <select id="gender">
-                <option value="">Gender</option>
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-                <option value="boy">Boy</option>
-                <option value="girl">Girl</option>
-                <option value="unisex">Unisex</option>
-            </select>
-            <select id="price">
-                <option value="">Price</option>
-                <option value="low">Rs. 0 - Rs. 499</option>
-                <option value="low-mid">Rs. 500 - Rs. 999</option>
-                <option value="mid">Rs. 1000 - Rs. 1499</option>
-                <option value="mid-high">Rs. 1500 - Rs. 1999</option>
-                <option value="high">Rs. 2000 & above</option>
-            </select>
-            <select id="color">
-                <option value="">Color</option>
-                <option value="white">White</option>
-                <option value="pink">Pink</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
-                <option value="green">Green</option>
-            </select>
-            <select id="packsize">
-                <option value="">Pack Size</option>
-                <option value="single">Single</option>
-                <option value="pack">Pack</option>
-                <option value="multi-pack">Multi-Pack</option>
-            </select>
-        </div>
-        <div id="data">
-
-        </div>
+    <div id="sale">
+        <img src="https://images-static.nykaa.com/uploads/5c7b7cb8-1aef-45ae-b9c3-6e1d1335a7d3.jpg?tr=w-1200,cm-pad_resize"
+            alt="sale">
     </div>
-    <div class="footer">
-        <div id="mediaLinks">
-            <div>
-                <i class="fa-regular fa-envelope"></i>
-                <p>Get special discount on your inbox</p>
+    <div id="parent">
+        <div id="left">
+            <div id="smallimages">
+                <img id="smallimage1"
+                    src="https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_1.jpg"
+                    alt="img1">
+                <img id="smallimage2"
+                    src="https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_2.jpg"
+                    alt="img2">
+                <img id="smallimage3"
+                    src="https://images-static.nykaa.com/media/consc/consious.jpg?tr=w-344,h-344,cm-pad_resize"
+                    alt="img3">
+                <img id="smallimage4"
+                    src="https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_3.jpg?tr=w-344,h-344,cm-pad_resize"
+                    alt="img4">
             </div>
-            <div>
-                <input type="text" placeholder="Your Email">
-                <button>SEND</button>
-            </div>
+            <div id="largeimage"><img src="https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_1.jpg" alt="default"></div>
         </div>
-
-        <div id="appStore">
-            <div>
-                <i class="fa-solid fa-mobile-screen"></i>
-                <p>EXPERIENCE THE NYKAA MOBILE APP</p>
+        <div id="right">
+            <div id="up">
+                <p>Biotique Morning Nectar Nourish & Hydrate Moisturizer
+                    (190ml)</p>
+                <p>4.5/5 | 26901 ratings & 4073 reviews | 76 Q&As</p>
+                <p>MRP <span id="MRP">₹330</span> ₹215 | <span id="off">35% Off</span></p>
             </div>
-            <div>
-                <i class="fa-brands fa-google-play"></i>
-                <i class="fa-brands fa-apple"></i>
+            <div id="mid">
+                <div>
+                    <button type="submit">Add to Bag</button>
+                </div>
+                <div>
+                    <div id="del">
+                        <div><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+                        <div><p>Delivery Options</p></div>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Enter Pincode">
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div id="customerCare">
-            <div>
-                <i class="fa-solid fa-phone"></i>
-                <p>FOR ANY HELP, YOU MAY CALL US AT
-                    1800-267-4444</p>
-            </div>
-            <div>
-                <p>(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)</p>
+            <div id="bottom">
+                <div>
+                    <div><i class="fa-regular fa-heart"></i></div>
+                    <div><p>100% Genuine Products</p></div>                    
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-rotate-left"></i></div>
+                    <div><p>Easy Return Policy</p></div>
+                </div>
             </div>
         </div>
     </div>
 </body>
 <script>
-    var products = [
+    var images = [
         {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/9/f9441e58906009450070_1.jpg",
-            name: "Biotique Morning Nectar Nourish & Hydrate Moisturizer",
-            price: "MRP ₹143"
+            id: 1,
+            url: "https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_1.jpg"
         },
         {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/a/8a541fbDOTKE00000054-1.jpg",
-            name: "Dot & Key Vitamin C + E Super Bright Moisturizer",
-            price: "MRP ₹387"
+            id: 2,
+            url: "https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_2.jpg"
         },
         {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/6/968f1d98904417301762_1.jpg",
-            name: "Mamaearth Vitamin C Daily Glow Face Cream With Vitamin",
-            price: "MRP ₹209"
+            id: 3,
+            url: "https://images-static.nykaa.com/media/consc/consious.jpg"
         },
         {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/8/98a93ef8904245710941_1.jpg",
-            name: "Nykaa So Creme! Creamy Matte Lipstick",
-            price: "MRP ₹260"
-        },
-        {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/e/ceac85d8901030561924_1.jpg",
-            name: "Lakme Lip Nude Favourites",
-            price: "MRP ₹688"
-        },
-        {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/e/9e5b3d6ETUDE00000057_1.jpg",
-            name: "ETUDE HOUSE Fixing Tint -",
-            price: "MRP 808"
-        },
-        {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/l/black-canvas_2.jpg",
-            name: "Kay Beauty Quick Dry Liquid Eyeliner",
-            price: "MRP ₹420"
-        },
-        {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/6/066c973N_8904052432975_1.jpg",
-            name: "Colorbar Waterproof Liquid Eyeliner",
-            price: "MRP ₹298"
-        },
-        {
-            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/9/19647_h_2.jpg",
-            name: "Lakme Insta Eye Liner",
-            price: "MRP ₹126"
+            id: 4,
+            url: "https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_3.jpg"
         }
     ];
-    displayProducts();
-    function displayProducts() {
-        products.map(function (elem) {
-            var divBox = document.createElement("div");
+    document.getElementById("smallimage1").addEventListener("click", function () {
+        diplayImage(0)
+    });
+    document.getElementById("smallimage2").addEventListener("click", function () {
+        diplayImage(1)
+    });
+    document.getElementById("smallimage3").addEventListener("click", function () {
+        diplayImage(2)
+    });
+    document.getElementById("smallimage4").addEventListener("click", function () {
+        diplayImage(3)
+    });
 
-            var anchor = document.createElement("a"); 
-            anchor.setAttribute("href", "file:///C:/Users/HP/Desktop/NYKAA/NYKAA-Clone/products/product_details.html");
-            anchor.setAttribute("target", "_blank");
-            
-            var image = document.createElement("img");
-            image.setAttribute("src", elem.image_url);
-
-            anchor.append(image);
-
-            var name = document.createElement("h5");
-            name.textContent = elem.name;
-
-            var price = document.createElement("p");
-            price.textContent = elem.price;
-
-            var btn = document.createElement("button");
-            btn.textContent = "Add To Cart";
-            btn.addEventListener("click", function () {
-                addToCart(elem);
-            })
-
-            divBox.append(anchor, name, price, btn);
-
-            document.getElementById("data").append(divBox);
-        });
-    }
-    cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
-    function addToCart(elem) {
-        cartList.push(elem);
-        localStorage.setItem("cart-list", JSON.stringify(cartList));
+    function diplayImage(elem) {
+        document.getElementById("largeimage").innerHTML = "";
+        var image = document.createElement("img");
+        image.setAttribute("src", images[elem].url);
+        document.getElementById("largeimage").append(image);
     }
 </script>
 

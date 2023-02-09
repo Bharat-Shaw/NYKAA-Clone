@@ -1,0 +1,109 @@
+body{
+    background-color: rgb(243, 243, 243);
+    margin: 0px;
+}
+#top{
+    margin-top: -16px;
+    margin-bottom: -15px;
+    display: block;
+}
+#sale{
+    margin-top: -17px;
+}
+#sale>img{
+    width: 100%;
+}
+#parent{
+    display: flex;
+    width:60%;
+    justify-content: center;
+    margin: auto;
+    margin-left: 230px;
+    padding:40px;
+    height: 500px;
+}
+#left{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#left>div{
+    margin: 10px;
+}
+#smallimages{
+    display:block;
+}
+#smallimages > img{
+    width: 50px;
+    border: 2px solid grey;    
+}
+#largeimage>img{
+    width: 300px;
+}
+button{
+    color: white;
+    background-color: #fc2779;
+    border:none;
+    height: 50px;
+    width: 200px;
+    margin-top: 40px;
+}
+#right{
+    background-color: white;
+    display: block ;
+    align-items: center;
+    margin-left: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#up{
+    display: block;
+    padding-left: 15px;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#MRP{
+    text-decoration: line-through;
+}
+#off{
+    color: green;
+}
+#mid {
+    display: flex;
+    margin-top: 50px;
+}
+#mid >div {
+    display: flex;
+    margin: 10px;
+}
+#mid > div > div{
+    margin-bottom: -10px;
+}
+#mid>div:nth-child(2){
+    display: block;
+}
+#del{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#bottom{
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    margin-top: 111px;
+}
+#bottom >div {
+    display: flex;
+    font-weight: bold;
+    font-size: x-small;
+    color:rgba(0,19,37,0.72);
+    margin-left: 15px;
+}
+#bottom>div>div{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
