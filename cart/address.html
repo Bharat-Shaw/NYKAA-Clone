@@ -39,7 +39,7 @@
         }
         #cart-nav a{
             text-decoration: none;
-            color: black;
+            color: rgb(68, 67, 67);
             cursor: pointer;
         }
 
@@ -71,6 +71,9 @@
             margin-bottom: 0px;
             color: rgb(68, 67, 67);
         }
+        #submit{
+            background-color: #fc2779;
+        }
     </style>
 </head>
 <body>
@@ -97,17 +100,36 @@
     <div id="add-div">
         <form id="add-detail">
             <h3>Address</h3>
-            <input type="number" placeholder="Pincode">
-            <input type="text" placeholder="House/Flat/Office No.">
-            <input type="text" placeholder="Road name/Area/Colony">
+            <input type="number" id="pincode" placeholder="Pincode">
+            <input type="text" id="house" placeholder="House/Flat/Office No.">
+            <input type="text" id="road" placeholder="Road name/Area/Colony">
             <h3>Contact</h3>
             <p>Information provided here will be used to contact you for delivery updates</p>
-            <input type="text" placeholder="Name">
-            <input type="Number" placeholder="Phone">
-            <input type="text" placeholder="Email ID">
-            <input type="submit" placeholder="Submit">
+            <input type="text" id="name" placeholder="Name">
+            <input type="Number" id="phone" placeholder="Phone">
+            <input type="text" id="email" placeholder="Email ID">
+            <input type="submit" id="submit" placeholder="Submit">
         </form>
     </div>
     
 </body>
+<script>
+    document.getElementById("add-detail").addEventListener("submit", getdata);
+    
+    function getdata(event){
+        event.preventDefault();
+        var pincode=document.getElementById("pincode").value;
+        var house=document.getElementById("house").value;
+        var road=document.getElementById("road").value;
+        var name=document.getElementById("name").value;
+        var phone=document.getElementById("phone").value;
+        var email=document.getElementById("email").value;
+        
+        if(pincode=="" || house=="" || road=="" || name=="" || phone=="" || email==""  ){
+            alert("Fill the input");
+            return;
+        }
+    }
+
+</script>
 </html>

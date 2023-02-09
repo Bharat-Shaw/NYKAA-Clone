@@ -40,7 +40,7 @@
         }
         #cart-nav a{
             text-decoration: none;
-            color: black;
+            color: rgb(68, 67, 67);
             cursor: pointer;
         }
         .noproduct{
@@ -51,7 +51,7 @@
             font-size: 40px;
             color: rgb(68, 67, 67);
         }
-        .nodis{
+        #nodis{
             display: none;
         }
         
@@ -83,9 +83,18 @@
         <h4 id="body">Total Number Of Products :- <span></span></h4>
         <div id="data"></div>
         <div id="none">
-            <input type="text" placeholder="Enter Code" id="promoCode">
-            <button id="code">Apply Promo</button>
-            <a href="Address.html">Click here to select address</a>
+            <div>
+                <input type="text" placeholder="Enter Code" id="promoCode">
+                <button id="code">Apply Promo</button>
+                <a href="Address.html">Click here to select address</a>
+            </div>
+            <div>
+                <h3>Price details</h3>
+                <p><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg" alt=""> Bag MRP <span></span></p>
+                <p>Bag items <span></span></p>
+                <p>Shipping charge<span></span></p>
+                <p>Total<span></span></p>
+            </div>
         </div>
     </div>
 </body>
@@ -99,8 +108,7 @@
     if (items.length === 0) {
         document.getElementById("body").textContent = "No Products";
         document.getElementById("body").setAttribute("class", "noproduct");
-        document.getElementById("none").setAttribute("class", "nodis");
-        // document
+        document.getElementById("none").setAttribute("id", "nodis");
     } else {
         displayItems();
         totalPrice();
