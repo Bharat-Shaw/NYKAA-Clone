@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script src="https://kit.fontawesome.com/f92bbc8b02.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="2nd.css">
@@ -7,13 +8,14 @@
         #mainLogo {
             width: 80px;
             position: absolute;
-            margin-left: 10px;
+            margin-left: 30px;
             margin-top: 20px;
         }
 
         #navbar {
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin-top: 0px;
         }
 
         nav {
@@ -36,6 +38,7 @@
             text-decoration: none;
             color: black;
         }
+
         #rightnav {
             display: flex;
             padding: 20px;
@@ -45,6 +48,196 @@
 
         #icon {
             margin-left: 20px;
+        }
+
+        #hoverbar {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: white;
+            color: grey;
+            width: 100%;
+            margin-top: -18px;
+            height: 50px;
+        }
+
+        #hoverbar>p {
+            font-size: x-small;
+        }
+
+        body {
+            background-color: rgb(243, 243, 243);
+            margin: 0px;
+        }
+
+        #top {
+            margin-top: -16px;
+            margin-bottom: -15px;
+            display: block;
+        }
+
+        #sale>img {
+            width: 100%;
+        }
+
+        #parent {
+            display: flex;
+            width: 60%;
+            justify-content: center;
+            margin: auto;
+            margin-left: 230px;
+            padding: 40px;
+            height: 500px;
+        }
+
+        #left {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        #left>div {
+            margin: 10px;
+        }
+
+        #smallimages {
+            display: block;
+        }
+
+        #smallimages>img {
+            width: 50px;
+            border: 2px solid grey;
+        }
+
+        #largeimage>img {
+            width: 300px;
+        }
+
+        #submit {
+            color: white;
+            background-color: #fc2779;
+            border: none;
+            height: 50px;
+            width: 200px;
+            margin-top: 40px;
+        }
+
+        #back {
+            background-color: white;
+            border: none;
+            width: 30px;
+            border-radius: 5px;
+        }
+
+        #right {
+            background-color: white;
+            display: block;
+            align-items: center;
+            margin-left: 3px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        #up {
+            display: block;
+            padding-left: 15px;
+        }
+
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #MRP {
+            text-decoration: line-through;
+        }
+
+        #off {
+            color: green;
+        }
+
+        #mid {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        #mid>div {
+            display: flex;
+            margin: 10px;
+        }
+
+        #mid>div>div {
+            margin-bottom: -10px;
+        }
+
+        #mid>div:nth-child(2) {
+            display: block;
+        }
+
+        #del {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #bottom {
+            display: flex;
+            background-color: rgb(243, 243, 243);
+            width: 100%;
+            margin-top: 111px;
+        }
+
+        #bottom>div {
+            display: flex;
+            font-weight: bold;
+            font-size: x-small;
+            color: rgba(0, 19, 37, 0.72);
+            margin-left: 15px;
+        }
+
+        #bottom>div>div {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+        }
+
+        .footer button {
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #3f414d;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .footer>div>div>p {
+            font-size: x-small;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #footer2 {
+            margin-top: -40px;
+            width: 100%;
+        }
+
+        #footer2>div {
+            display: flex;
+            background-color: #8c8d94;
+            color: white;
+            padding-left: 100px;
+            padding-right: 150px;
+            margin: 40px;
+        }
+
+        #footer2>div>div {
+            display: block;
+            margin: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: xx-small;
         }
     </style>
 
@@ -77,10 +270,19 @@
             </div>
         </div>
     </div>
+    <div id="hoverbar">
+        <p id="p1">Make-up</p>
+        <p id="p2">Skin</p>
+        <p id="p3">Hair</p>
+        <p id="p4">Natural</p>
+        <p id="p5">Fragrance</p>
+    </div>
     <div id="sale">
         <img src="https://images-static.nykaa.com/uploads/5c7b7cb8-1aef-45ae-b9c3-6e1d1335a7d3.jpg?tr=w-1200,cm-pad_resize"
             alt="sale">
     </div>
+    <div><a href="file:///C:/Users/HP/Desktop/NYKAA/NYKAA-Clone/products/products.html"><button id="back"><i
+                    class="fa-solid fa-arrow-left"></i></button></a></div>
     <div id="parent">
         <div id="left">
             <div id="smallimages">
@@ -97,7 +299,9 @@
                     src="https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_3.jpg?tr=w-344,h-344,cm-pad_resize"
                     alt="img4">
             </div>
-            <div id="largeimage"><img src="https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_1.jpg" alt="default"></div>
+            <div id="largeimage"><img
+                    src="https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_1.jpg"
+                    alt="default"></div>
         </div>
         <div id="right">
             <div id="up">
@@ -108,12 +312,14 @@
             </div>
             <div id="mid">
                 <div>
-                    <button type="submit">Add to Bag</button>
+                    <button id="submit" type="submit">Add to Bag</button>
                 </div>
                 <div>
                     <div id="del">
                         <div><i class="fa-sharp fa-solid fa-location-dot"></i></div>
-                        <div><p>Delivery Options</p></div>
+                        <div>
+                            <p>Delivery Options</p>
+                        </div>
                     </div>
                     <div>
                         <input type="text" placeholder="Enter Pincode">
@@ -123,11 +329,15 @@
             <div id="bottom">
                 <div>
                     <div><i class="fa-regular fa-heart"></i></div>
-                    <div><p>100% Genuine Products</p></div>                    
+                    <div>
+                        <p>100% Genuine Products</p>
+                    </div>
                 </div>
                 <div>
                     <div><i class="fa-solid fa-rotate-left"></i></div>
-                    <div><p>Easy Return Policy</p></div>
+                    <div>
+                        <p>Easy Return Policy</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,7 +347,10 @@
     var images = [
         {
             id: 1,
-            url: "https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_1.jpg"
+            url: "https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_1.jpg",
+            name: "Biotique Morning Nectar Nourish & Hydrate Moisturizer",
+            price: "MRP ₹215"
+
         },
         {
             id: 2,
@@ -164,6 +377,17 @@
     document.getElementById("smallimage4").addEventListener("click", function () {
         diplayImage(3)
     });
+
+    document.querySelector("button").addEventListener("click", function () {
+        addToCart();
+    });
+
+    cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+    function addToCart() {
+        cartList.push(images[0]);
+        localStorage.setItem("cart-list", JSON.stringify(cartList));
+    }
+
 
     function diplayImage(elem) {
         document.getElementById("largeimage").innerHTML = "";

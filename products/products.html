@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script src="https://kit.fontawesome.com/f92bbc8b02.js" crossorigin="anonymous"></script>
     <style>
+        body {
+            background-color: rgb(243, 243, 243);
+            margin: 0%;
+            padding: 0%;
+        }
+
         #mainLogo {
             width: 80px;
             position: absolute;
-            margin-left: 10px;
+            margin-left: 30px;
             margin-top: 20px;
         }
 
         #navbar {
+            background-color: white;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             margin-top: 0px;
         }
@@ -73,10 +81,11 @@
         }
 
         #data>div {
+            background-color: white;
             width: 95%;
             font-size: small;
             text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 20px;
             box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
         }
@@ -98,46 +107,76 @@
         h3 {
             text-align: center;
         }
-        .footer{
-    background-color: rgb(50, 41, 41);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
-.footer>div>div>p{
-    font-size:x-small;
-    font-family: sans-serif;
-}
-#mediaLinks > div{
-    display: flex;
-    align-items: center;
-}
-#mediaLinks > div > *{
-    margin: 10px;
-}
-#appStore > div{
-    display: flex;
-    align-items: center;
-}
-#appStore > div > *{
-    margin: 10px;
-}
-#customerCare > div{
-    display: flex;
-    align-items: center;
-}
-#customerCare > div > *{
-    margin: 10px;
-}
-.footer button{
-    border: none;
-    border-radius: 5px;
-}
-#top{
-    margin-top: -16px;
-    margin-bottom: -15px;
-    display: block;
-}
+        .footer {
+            background-color: #3f414d;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .footer>div>div>p {
+            font-size: x-small;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #mediaLinks>div {
+            display: flex;
+            align-items: center;
+        }
+
+        #mediaLinks>div>* {
+            margin: 10px;
+        }
+
+        #appStore>div {
+            display: flex;
+            align-items: center;
+        }
+
+        #appStore>div>* {
+            margin: 10px;
+        }
+
+        #customerCare>div {
+            display: flex;
+            align-items: center;
+        }
+
+        #customerCare>div>* {
+            margin: 10px;
+        }
+
+        .footer button {
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #top {
+            margin-top: -16px;
+            margin-bottom: -15px;
+            display: block;
+        }
+        #footer2{
+            margin-top: -40px;
+            width: 100%;
+        }
+
+        #footer2 > div{
+            display: flex;
+            background-color: #8c8d94;
+            color: white;
+            padding-left: 100px;
+            padding-right: 150px;
+            margin: 40px;
+        }
+        #footer2 > div > div{
+            display: block;
+            margin: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: xx-small;
+        }
     </style>
 </head>
 
@@ -256,6 +295,58 @@
             </div>
         </div>
     </div>
+    <div id="footer2">
+        <div>
+            <div>
+                <h4>NYKAA</h4>
+                <p>Who are we?</p>
+                <p>Careers</p>
+                <p>Authenticity</p>
+                <p>Press</p>
+                <p>Testimonials
+                <p>Nykaa CSR</p>
+                <p>Responsible Disclosure</p>
+                <p>Investor Relations</p>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <p>Contact Us</p>
+                <p>Frequently asked questions</p>
+                <p>Store Locator</p>
+                <p>Cancellation & Return</p>
+                <p>Shipping & Delivery</p>
+                <p>Sell on Nykaa</p>
+            </div>
+            <div>
+                <h4>Inspire Me</h4>
+                <p>Beauty Book</p>
+                <p>Nykaa TV</p>
+                <p>Nykaa Network</p>
+                <p>Buying Guides</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <p>Offer Zone</p>
+                <p>New Launches</p>
+                <p>Nykaa Man</p>
+                <p>Nykaa Fashion</p>
+                <p>Nykaa Pro</p>
+            </div>
+            <div>
+                <h4>Top Categories</h4>
+                <p>Makeup</p>
+                <p>Skin</p>
+                <p>Hair</p>
+                <p>Bath & Body</p>
+                <p>Appliances</p>
+                <p>Mom and Baby</p>
+                <p>Wellness</p>
+                <p>Fragrance</p>
+                <p>Natural</p>
+                <p>Luxe</p>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     var products = [
@@ -310,10 +401,10 @@
         products.map(function (elem) {
             var divBox = document.createElement("div");
 
-            var anchor = document.createElement("a"); 
+            var anchor = document.createElement("a");
             anchor.setAttribute("href", "file:///C:/Users/HP/Desktop/NYKAA/NYKAA-Clone/products/product_details.html");
             anchor.setAttribute("target", "_blank");
-            
+
             var image = document.createElement("img");
             image.setAttribute("src", elem.image_url);
 
