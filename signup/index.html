@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Home Page</title>
+  <style>
+    .form-control {
+      width: 25%;
+      margin-left: 150px;
+      border: none;
+      padding: 8px;
+      border-radius: 3px;
+      background-color: whitesmoke;
+    }
+
+    a {
+      font-weight: 500;
+      color: black !important;
+      margin-left: 40px;
+    }
+
+    button {
+      background-color: #fc2779 !important;
+      color: white !important;
+      border: none !important;
+      padding: 8px !important;
+    }
+
+    .image {
+      margin-left: 40px;
+    }
+
+    .container-fluid {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+
+    .items {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .size {
+      height: 5px !important;
+      margin: 10px !important;
+      margin-bottom: 0px !important;
+    }
+
+    hr {
+      background-color: grey !important;
+    }
+    .col-2 > p{
+padding-top:7px;
+      text-align: center;
+      font-weight: 500;
+      color:black;
+    }
+    .off{
+      font-size:20px;
+      margin-bottom: 0px
+    }
+    .off > p {
+    
+    color:gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg ">
+      <img class="image" src="./Nykaa_Logo.png" width="70" height="30">
+
+
+      <div class="collapse navbar-collapse ml-4" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto ml-4">
+          <!-- <li class="nav-item active padding">
+                      <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Brands</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Luxe</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Nykaa fashion</a>
+                    </li> -->
+          <li>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Brands
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Luxe
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Nykaa Fashion
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <input class="form-control mr-sm-2 align-right" type="search" placeholder="Search on Nykaa" aria-label="Search">
+        <!-- <button class="btn btn-outline-success mx-3 my-2 my-sm-0 px-3" data-toggle="tooltip" data-placement="bottom"><b>Sign In</b>
+        </button> -->
+        <button type="button" id="signInBtn" class="btn btn-secondary mx-3 my-2 my-sm-0 px-3" data-html="true" data-container="body" data-toggle="popover" data-placement="bottom" >
+          Sign In
+        </button>
+
+      </div>
+    </nav>
+    <hr>
+    <div class="row px-5">
+
+      <div class="col-1">Makeup</div>
+      <div class="col-1">Skin</div>
+      <div class="col-1">Hair</div>
+      <div class="col-1">Appliances</div>
+      <div class="col-1">Natural</div>
+      <div class="col-1">Men</div>
+      <div class="col-1">Women</div>
+      <div class="col-2">Mom & Baby</div>
+      <div class="col-2">
+        <img src="./sale-logo.jpg" width="40" height="30">
+      </div>
+
+
+      </ul>
+    </div>
+    <hr class="size">
+    <div class="row">
+      <img src="./mega-deals.png">
+    </div>
+    <div class="row py-3 px-3">
+      <div class="col-2"> <img src="./img1.png" width="200" height="200"><p>Bestselling Combos</p> </div>
+      <div class="col-2"> <img src="./img2.png" width="200" height="200"><p>Lipstick</p></div>
+      <div class="col-2"> <img src="./img3.png" width="200" height="200"><p>Foundation</p></div>
+      <div class="col-2"> <img src="./img4.png" width="200" height="200"><p>Concealer</p></div>
+      <div class="col-2"> <img src="./img6.png" width="200" height="200"><p>Eyeliner</p></div>
+      <div class="col-2"> <img src="./img7.png" width="200" height="200"><p>Compact</p></div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="./deals.png" width="1300">
+        </div>
+
+    </div>
+    <div class="row py-3 px-5">
+      <div class="col-2 mx-3"> <img src="./deal1.png" width="200" height="200"><p class="off">Up To 40% Off<p>Free Mascara On 999+</p></p> </div>
+      <div class="col-2 mx-3"> <img src="./deal2.png" width="200" height="200"><p class="off">Up To 40% Off<p>Pick A Free Mini On ₹1199+</p></p></div>
+      <div class="col-2 mx-3"> <img src="./deal3.png" width="200" height="200"><p class="off">Up To 20% Off<p>Free heart Shaped lipstick on ₹850+</p></p></div>
+      <div class="col-2 mx-3"> <img src="./deal4.png" width="200" height="200"><p class="off">Flat 10% Off<p>Free Gift On ₹799 & ₹1299</p></p></div>
+      <div class="col-2 mx-3"> <img src="./deal5.png" width="200" height="200"><p class="off">Up To 50% Off<p>₹1050 Gifts On ₹2000</p></p></div>
+    </div>
+    <div class="row py-3 px-5">
+      <div class="col-2 mx-3"> <img src="./deal6.png" width="200" height="200"><p class="off">Up To 40% Off<p>Free Eyeshadow of ₹599 on ₹1199</p></p> </div>
+      <div class="col-2 mx-3"> <img src="./deal7.png" width="200" height="200"><p class="off">Up To 40% Off<p>On The Entire Range!</p></p></div>
+      <div class="col-2 mx-3"> <img src="./deal8.png" width="200" height="200"><p class="off">Up To 20% Off<p>Free Lipstick Worth ₹799 On ₹899+</p></p></div>
+      <div class="col-2 mx-3"> <img src="./deal9.png" width="200" height="200"><p class="off">Flat 10% Off<p>Free Highlighter On ₹4500</p></p></div>
+      <div class="col-2 mx-3"> <img src="./deal10.png" width="200" height="200"><p class="off">Up To 50% Off<p>Free Lipstick On ₹799</p></p></div>
+    </div>
+
+
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+  // $("[data-toggle=popover]").popover(
+  //   {
+  //     html:true,
+  //     content: function(){
+  //       return $('./'+login.html).html();
+  //     }
+  //   }
+  // );
+document.getElementById("signInBtn").addEventListener("click",signIn);
+function signIn(){
+
+  window.location.href="./login.html"; 
+}
+ 
+
+</script>
+</html>

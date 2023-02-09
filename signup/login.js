@@ -15,7 +15,7 @@ var x=lc.filter(function(elem){
 })
 //console.log(x);
 if(x.length!=0){
-
+window.location.href="./otp.html"
 }
 else{
     window.location.href="./signup.html";  

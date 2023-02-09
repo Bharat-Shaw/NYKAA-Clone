@@ -16,5 +16,5 @@ lc.push(obj);
 console.log(lc);
 
 localStorage.setItem("userData",JSON.stringify(lc));
-
+window.location.href="./index.html";
 }
