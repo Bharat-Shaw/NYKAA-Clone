@@ -23,9 +23,10 @@
             align-items: center;
             flex-direction: column;
             /* align-items: center; */
-            height: 500px;
+            height: 600px;
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
             margin-top: 50px;
+            padding-bottom: 30px;
             width: 35%;
             background-color: rgb(255, 255, 255);
         }
@@ -64,12 +65,15 @@
         }
         input{
             padding: 10px;
-            
+            margin-bottom: 20px;
         }
         button{
             padding: 10px;
             border-radius: 5px;
             background-color: rgb(214, 182, 2);
+        }
+        a{
+            padding-bottom: 20px;
         }
 
     </style>
@@ -99,7 +103,7 @@
                 <p>OTP sent to your registered mobile number</p>
                 <p>Enter One Time Password (OTP)</p>
                 <input type="number" name="otp" id="otp" placeholder="Enter your OTP">
-                <button>Make Payment</button><br>
+                <button id="confirm">Make Payment</button><br>
                 <a href="index.html">Click here to abort transaction and go back to merchant site</a>
             </div>
             
@@ -114,5 +118,16 @@
 <script>
     var bag =JSON.parse(localStorage.getItem("total"));
     document.querySelector(".amount").innerHTML= bag;
+
+    document.getElementById("confirm").addEventListener("click" , proceed);
+    function proceed(){
+        var value=document.getElementById("otp").value;
+
+        if(value == ""){
+            alert("Wrong OTP");
+        }else {
+            window.location.href = "complete.html";
+        }
+    }
 </script>
 </html>

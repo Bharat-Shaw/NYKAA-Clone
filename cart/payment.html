@@ -170,7 +170,7 @@
                   </div>
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                      <input type="text" class="form-control" placeholder="Enter UPI/VPA Id">
+                      <input type="text" id="upi" class="form-control" placeholder="Enter UPI/VPA Id">
                     </div>
                   </div>
                 </div>
@@ -195,21 +195,21 @@
                       <span class="font-weight-normal card-text">Card Number</span>
                       <div class="input">
                         <i class="fa fa-credit-card"></i>
-                        <input type="number" class="form-control" placeholder="0000 0000 0000 0000">
+                        <input type="number" id="cardno" class="form-control" placeholder="0000 0000 0000 0000">
                       </div> 
                       <div class="row mt-3 mb-3">
                         <div class="col-md-6">
                           <span class="font-weight-normal card-text">Expiry Date</span>
                           <div class="input">
                             <i class="fa fa-calendar"></i>
-                            <input type="month" class="form-control" placeholder="MM/YY">
+                            <input type="month" id="date" class="form-control" placeholder="MM/YY">
                           </div> 
                         </div>
                         <div class="col-md-6">
                           <span class="font-weight-normal card-text">CVC/CVV</span>
                           <div class="input">
                             <i class="fa fa-lock"></i>
-                            <input type="password"  class="form-control" placeholder="000">
+                            <input type="password" id="cvv" class="form-control" placeholder="000">
                           </div> 
                         </div>
                       </div>
@@ -263,14 +263,43 @@
       </div>
 </body>
 <script>
-    document.querySelector("#pay").addEventListener("click", hello);
-    function hello(){
-      window.location.href = "otp.html";
-    }
+    // document.querySelector("#pay").addEventListener("click", hello);
+    // function hello(){
+    //   window.location.href = "otp.html";
+    // }
     var bag =JSON.parse(localStorage.getItem("total"));
     document.querySelector(".total-amount").innerHTML= bag;
     document.querySelector(".bagcount").innerHTML= JSON.parse(localStorage.getItem("bag"));
     document.querySelector(".total-amou").innerHTML= bag +50;
     document.querySelector(".total-amo").innerHTML= bag +50;
+
+
+    document.getElementById("pay").addEventListener("click", getdata);
+    
+    function getdata(){
+        var upi=document.getElementById("upi").value;
+        var check=0;
+        if(upi !== ""){
+          check=1;
+        }
+        
+        var cardno=document.getElementById("cardno").value;
+        var date=document.getElementById("date").value;
+        var cvv=document.getElementById("cvv").value;
+        if(cardno !== "" && date !== "" && cvv !== ""){
+          check=2;
+        }
+
+        if(check == 0){
+            alert("Fill the input");
+            return;
+        }else {
+          // document.querySelector("#pay").addEventListener("click", hello);
+          // function hello(){
+            window.location.href = "otp.html";
+          // }
+            
+        }
+    }
 </script>
 </html>

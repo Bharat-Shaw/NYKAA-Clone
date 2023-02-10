@@ -133,13 +133,21 @@
             justify-content: center;
             align-items: center;
             height: 500px;
-            font-size: 50px;
+            font-size: 30px;
+        }
+        #no-product a{
+            text-decoration: none;
+            background-color: white;
+            color: rgb(245, 85, 111);
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         }
     </style>
 </head>
 <body>
     <div id="cart-nav">
-        <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg" alt="">
+        <a href="index.html"><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg" alt=""></a>
         <div>
             <div>
                 <a href="cart.html"><img id="cart-img" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg" alt=""></a>
@@ -147,13 +155,13 @@
                 <hr>
             </div>
             <div>
-                <a href="address.html"><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg" alt=""></a>
-                <a href="address.html">Address</a>
+                <a href=""><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg" alt=""></a>
+                <a href="">Address</a>
                 <hr>
             </div>
             <div>
-                <a href="payment.html"><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg" alt=""></a>
-                <a href="payment.html">Payment</a>
+                <a href=""><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg" alt=""></a>
+                <a href="">Payment</a>
                 <hr>
             </div>
         </div>
@@ -231,6 +239,7 @@
         </div>
     </div>
     <div id="no-product"></div>
+    </div>
 </body>
 <script>
     // window.addEventListener("load", (event) => {
@@ -241,9 +250,14 @@
     var items = JSON.parse(localStorage.getItem("cart-list")) || [];
     if (items.length === 0) {
         document.querySelector("#body-mid").setAttribute("id", "nodis");
-        document.getElementById("no-product").textContent = "No Products";
-       
-        console.log("hello")
+        // document.getElementById("no-product").textContent = "No Products";
+        // var pri = document.createElement("br");
+        var price = document.createElement("a");
+            price.setAttribute("href", "index.html");
+            price.textContent = "Add products to cart";
+            document.getElementById("no-product").append(price);
+            // document.getElementById("ne").append(pri);
+            
     } else {
         displayItems();
         totalPrice();
