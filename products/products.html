@@ -6,8 +6,6 @@
     <style>
         body {
             background-color: rgb(243, 243, 243);
-            margin: 0%;
-            padding: 0%;
         }
 
         #mainLogo {
@@ -20,7 +18,7 @@
         #navbar {
             background-color: white;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            margin-top: 0px;
+            margin-top: -20px;
         }
 
         nav {
@@ -65,7 +63,7 @@
             margin-left: 20px;
             margin-right: 20px;
             margin-top: 20px;
-            width: 30%;
+            width: 200px;
             height: 30px;
         }
 
@@ -77,12 +75,15 @@
 
         #data {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            width: 90%;
+            margin-top: -10px;
         }
 
         #data>div {
             background-color: white;
             width: 95%;
+            height: 350px;
             font-size: small;
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -90,23 +91,26 @@
             box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
         }
 
+        #data img {
+            width: 70%;
+        }
+
         #data>div>p {
             color: grey;
-            font-size: small;
+            font-size: xx-small;
         }
 
         #data button {
             border: grey;
             border-radius: 10px;
             padding: 10px;
-            margin-top: 20px;
             color: crimson;
-            margin-bottom: 20px;
         }
 
-        h3 {
+        #heading {
             text-align: center;
         }
+
         .footer {
             background-color: #3f414d;
             color: white;
@@ -114,7 +118,7 @@
             justify-content: space-between;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         .footer>div>div>p {
             font-size: x-small;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -153,17 +157,12 @@
             border-radius: 5px;
         }
 
-        #top {
-            margin-top: -16px;
-            margin-bottom: -15px;
-            display: block;
-        }
-        #footer2{
+        #footer2 {
             margin-top: -40px;
             width: 100%;
         }
 
-        #footer2 > div{
+        #footer2>div {
             display: flex;
             background-color: #8c8d94;
             color: white;
@@ -171,18 +170,28 @@
             padding-right: 150px;
             margin: 40px;
         }
-        #footer2 > div > div{
+
+        #footer2>div>div {
             display: block;
             margin: auto;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: xx-small;
         }
+
+        @media all and (min-width : 786px) and (max-width: 1024px) {
+            #data {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media all and (min-width : 320px) and (max-width: 786px) {
+            #data {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div id="top">
-    </div>
     <div id="navbar">
         <div>
             <img id="mainLogo"
@@ -207,54 +216,27 @@
             </div>
         </div>
     </div>
-    <h3>All Products</h3>
+    </div>
+    <h3 id="heading">All Products</h3>
     <div id="parent">
         <div class="menu">
             <select id="brands">
                 <option value="">Brands</option>
-                <option value="olay">Biotique</option>
+                <option value="biotique">Biotique</option>
                 <option value="mamaearth">Mamaearth</option>
                 <option value="lakme">Lakme</option>
-                <option value="ponds">Colorbar</option>
-                <option value="wow">Dot & Key</option>
-            </select>
-            <select id="skin">
-                <option value="">Skin Type</option>
-                <option value="dry">Dry</option>
-                <option value="oily">Oily</option>
-                <option value="sensitive">Sensitive</option>
-                <option value="normal">Normal</option>
-                <option value="combination">Combination</option>
+                <option value="colorbar">Colorbar</option>
+                <option value="dot & key">Dot & Key</option>
+                <option value="kay beauty">Kay Beauty</option>
+                <option value="etude">Etude</option>
+                <option value="nykaa">Nykaa</option>
+                <option value="nykaa">Beardo</option>
+                <option value="nykaa">wildstone</option>
             </select>
             <select id="gender">
                 <option value="">Gender</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
-                <option value="boy">Boy</option>
-                <option value="girl">Girl</option>
-                <option value="unisex">Unisex</option>
-            </select>
-            <select id="price">
-                <option value="">Price</option>
-                <option value="low">Rs. 0 - Rs. 499</option>
-                <option value="low-mid">Rs. 500 - Rs. 999</option>
-                <option value="mid">Rs. 1000 - Rs. 1499</option>
-                <option value="mid-high">Rs. 1500 - Rs. 1999</option>
-                <option value="high">Rs. 2000 & above</option>
-            </select>
-            <select id="color">
-                <option value="">Color</option>
-                <option value="white">White</option>
-                <option value="pink">Pink</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
-                <option value="green">Green</option>
-            </select>
-            <select id="packsize">
-                <option value="">Pack Size</option>
-                <option value="single">Single</option>
-                <option value="pack">Pack</option>
-                <option value="multi-pack">Multi-Pack</option>
             </select>
         </div>
         <div id="data">
@@ -353,56 +335,93 @@
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/9/f9441e58906009450070_1.jpg",
             name: "Biotique Morning Nectar Nourish & Hydrate Moisturizer",
-            price: "MRP ₹143"
+            price: 143,
+            brand: "biotique",
+            gender: "female"
         },
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/a/8a541fbDOTKE00000054-1.jpg",
             name: "Dot & Key Vitamin C + E Super Bright Moisturizer",
-            price: "MRP ₹387"
+            price: 387,
+            brand: "dot & key",
+            gender: "female"
         },
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/6/968f1d98904417301762_1.jpg",
             name: "Mamaearth Vitamin C Daily Glow Face Cream With Vitamin",
-            price: "MRP ₹209"
+            price: 209,
+            brand: "mamaearth",
+            gender: "female"
         },
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/8/98a93ef8904245710941_1.jpg",
             name: "Nykaa So Creme! Creamy Matte Lipstick",
-            price: "MRP ₹260"
+            price: 260,
+            brand: "nykaa",
+            gender: "female"
         },
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/e/ceac85d8901030561924_1.jpg",
-            name: "Lakme Lip Nude Favourites",
-            price: "MRP ₹688"
+            name: "Lakme Lip Nude Favourites Light Creamy Shades",
+            price: 688,
+            brand: "lakme",
+            gender: "female"
         },
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/e/9e5b3d6ETUDE00000057_1.jpg",
-            name: "ETUDE HOUSE Fixing Tint -",
-            price: "MRP 808"
+            name: "ETUDE HOUSE Light Waterproof Fixing Tint",
+            price: 808,
+            brand: "etude",
+            gender: "female"
         },
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/l/black-canvas_2.jpg",
-            name: "Kay Beauty Quick Dry Liquid Eyeliner",
-            price: "MRP ₹420"
+            name: "Kay Beauty Quick Dry Smudge-free Liquid Eyeliner",
+            price: 420,
+            brand: "kay beauty",
+            gender: "female"
         },
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/6/066c973N_8904052432975_1.jpg",
-            name: "Colorbar Waterproof Liquid Eyeliner",
-            price: "MRP ₹298"
+            name: "Colorbar Waterproof Liquid Perfect Stroke Eyeliner",
+            price: 298,
+            brand: "colorbar",
+            gender: "female"
         },
         {
             image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/9/19647_h_2.jpg",
-            name: "Lakme Insta Eye Liner",
-            price: "MRP ₹126"
+            name: "Lakme Waterproof Dark Insta Eye Liner",
+            price: 126,
+            brand: "lakme",
+            gender: "female"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/f/2ff41abBEAAA00000020_1.jpg",
+            name: "Beardo Max Non-greasy Sunscreen Spray SPF-50 P+++ for Oily Skin",
+            price: 287,
+            brand: "beardo",
+            gender: "male"
+        },
+        {
+            image_url: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/9/8904006306604__new1.jpg",
+            name: "Wild Stone Edge Eau Da Parfum For Men",
+            price: 371,
+            brand: "wildstone",
+            gender: "male"
         }
     ];
-    displayProducts();
-    function displayProducts() {
-        products.map(function (elem) {
+    document.getElementById("brands").addEventListener("change", filterBrand);
+    document.getElementById("gender").addEventListener("change", filterGender);
+
+    displayProducts(products);
+    function displayProducts(prod) {
+        document.getElementById("data").textContent = "";
+
+        prod.map(function (elem) {
             var divBox = document.createElement("div");
 
             var anchor = document.createElement("a");
-            anchor.setAttribute("href", "file:///C:/Users/HP/Desktop/NYKAA/NYKAA-Clone/products/product_details.html");
+            anchor.setAttribute("href", "product_details.html");
             anchor.setAttribute("target", "_blank");
 
             var image = document.createElement("img");
@@ -432,6 +451,32 @@
         cartList.push(elem);
         localStorage.setItem("cart-list", JSON.stringify(cartList));
     }
+    function filterBrand() {
+        var brnd = document.getElementById("brands").value;
+        if (brnd === "") {
+            displayProducts(products);
+        }
+        else {
+            var filteredProduct = products.filter(function (el) {
+                if (el.brand == brnd) return el;
+            });
+            displayProducts(filteredProduct);
+        }
+    }
+    function filterGender() {
+        var gndr = document.getElementById("gender").value;
+        if (gndr === "") {
+            displayProducts(products);
+        }
+        else {
+            var filteredProduct = products.filter(function (el) {
+                if (el.gender == gndr) return el;
+            });
+            displayProducts(filteredProduct);
+        }
+    }
+
+
 </script>
 
 </html>
