@@ -1,4 +1,5 @@
 document.querySelector("form").addEventListener("submit",saveData);
+var sData=JSON.parse(localStorage.getItem("signInData")) || [];
 
 const defaultOtp=1234;
 function saveData(){
@@ -6,7 +7,10 @@ function saveData(){
   
 var otp=document.getElementById("otp").value;
 if(defaultOtp==otp){
-    window.location.href="./index.html";
+    var data=JSON.parse(localStorage.getItem("dataExist"));
+    sData.push(data);
+    localStorage.setItem("signInData",sData);
+    window.location.href="./products.html";
 }
 
 

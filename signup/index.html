@@ -19,7 +19,7 @@
       background-color: whitesmoke;
     }
 
-    a {
+    .dropdown-toggle {
       font-weight: 500;
       color: black !important;
       margin-left: 40px;
@@ -55,19 +55,40 @@
     hr {
       background-color: grey !important;
     }
-    .col-2 > p{
-padding-top:7px;
+
+    .col-2>p {
+      padding-top: 7px;
       text-align: center;
       font-weight: 500;
-      color:black;
+      color: black;
     }
-    .off{
-      font-size:20px;
+
+    .off {
+      font-size: 20px;
       margin-bottom: 0px
     }
-    .off > p {
-    
-    color:gray;
+
+    .off>p {
+
+      color: gray;
+    }
+
+    .backColor {
+      background-color: white;
+    }
+
+    .marginTop {
+      margin-top: 60px;
+      ;
+    }
+
+    .removeLine {
+      color: black;
+      text-decoration: none;
+    }
+
+    nav> div > a {
+      color: black;
     }
   </style>
 </head>
@@ -75,32 +96,26 @@ padding-top:7px;
 <body>
   <div class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg backColor fixed-top">
       <img class="image" src="./Nykaa_Logo.png" width="70" height="30">
 
 
       <div class="collapse navbar-collapse ml-4" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto ml-4">
-          <!-- <li class="nav-item active padding">
-                      <a class="nav-link" href="#">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Brands</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Luxe</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Nykaa fashion</a>
-                    </li> -->
+        <ul class="navbar-nav mr-auto ml-2">
           <li>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Categories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="products.html">Makeup </a>
+              <a class="dropdown-item" href="products.html">Skin</a>
+              <a class="dropdown-item" href="products.html">Hair</a>
+              <a class="dropdown-item" href="products.html">Appliances</a>
+              <a class="dropdown-item" href="products.html">Natural</a>
+              <a class="dropdown-item" href="products.html">Men</a>
+              <a class="dropdown-item" href="products.html">Women</a>
+              <a class="dropdown-item" href="products.html">Mom & Baby</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -109,10 +124,16 @@ padding-top:7px;
               Brands
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="products.html">Maybelline</a>
+              <a class="dropdown-item" href="products.html">Lakme</a>
+              <a class="dropdown-item" href="products.html">Loreal</a>
+              <a class="dropdown-item" href="products.html">Lotus</a>
+              <a class="dropdown-item" href="products.html">Clinique</a>
+              <a class="dropdown-item" href="products.html">Mac</a>
+              <a class="dropdown-item" href="products.html">Olay</a>
+              <a class="dropdown-item" href="products.html">Neutrogena</a>
+
+
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -121,10 +142,13 @@ padding-top:7px;
               Luxe
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="products.html">Face</a>
+              <a class="dropdown-item" href="products.html">Eyes</a>
+
+              <a class="dropdown-item" href="products.html">Lips</a>
+              <a class="dropdown-item" href="products.html">Nails</a>
+              <a class="dropdown-item" href="products.html">Tools & Brushes</a>
+              <a class="dropdown-item" href="products.html">Makeup Kits</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -133,10 +157,14 @@ padding-top:7px;
               Nykaa Fashion
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="products.html">Women</a>
+              <a class="dropdown-item" href="products.html">Men</a>
+
+              <a class="dropdown-item" href="products.html">Kids</a>
+              <a class="dropdown-item" href="products.html">Tech</a>
+              <a class="dropdown-item" href="products.html">Home</a>
+              <a class="dropdown-item" href="products.html">House Of Nykaa</a>
+              <a class="dropdown-item" href="products.html">Top Brands</a>
             </div>
           </li>
 
@@ -145,23 +173,30 @@ padding-top:7px;
         <input class="form-control mr-sm-2 align-right" type="search" placeholder="Search on Nykaa" aria-label="Search">
         <!-- <button class="btn btn-outline-success mx-3 my-2 my-sm-0 px-3" data-toggle="tooltip" data-placement="bottom"><b>Sign In</b>
         </button> -->
-        <button type="button" id="signInBtn" class="btn btn-secondary mx-3 my-2 my-sm-0 px-3" data-html="true" data-container="body" data-toggle="popover" data-placement="bottom" >
+        <button type="button" id="signInBtn" class="btn btn-secondary mx-3 my-2 my-sm-0 px-3" data-html="true"
+          data-container="body" data-toggle="popover" data-placement="bottom">
           Sign In
         </button>
+        <a href="cart.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+          </svg>
+        </a>
 
       </div>
     </nav>
-    <hr>
+    <hr class="marginTop">
     <div class="row px-5">
 
-      <div class="col-1">Makeup</div>
-      <div class="col-1">Skin</div>
-      <div class="col-1">Hair</div>
-      <div class="col-1">Appliances</div>
-      <div class="col-1">Natural</div>
-      <div class="col-1">Men</div>
-      <div class="col-1">Women</div>
-      <div class="col-2">Mom & Baby</div>
+      <a class="col-1 removeLine" href="products.html">Makeup</a>
+      <a class="col-1 removeLine" href="products.html">Skin</a>
+      <a class="col-1 removeLine" href="products.html">Hair</a>
+      <a class="col-1 removeLine" href="products.html">Appliances</a>
+      <a class="col-1 removeLine" href="products.html">Natural</a>
+      <a class="col-1 removeLine" href="products.html">Men</a>
+      <a class="col-1 removeLine" href="products.html">Women</a>
+      <a class="col-2 removeLine">Mom & Baby</a>
       <div class="col-2">
         <img src="./sale-logo.jpg" width="40" height="30">
       </div>
@@ -174,167 +209,221 @@ padding-top:7px;
       <img src="./mega-deals.png">
     </div>
     <div class="row py-3 px-3">
-      <div class="col-2"> <img src="./img1.png" width="200" height="200"><p>Bestselling Combos</p> </div>
-      <div class="col-2"> <img src="./img2.png" width="200" height="200"><p>Lipstick</p></div>
-      <div class="col-2"> <img src="./img3.png" width="200" height="200"><p>Foundation</p></div>
-      <div class="col-2"> <img src="./img4.png" width="200" height="200"><p>Concealer</p></div>
-      <div class="col-2"> <img src="./img6.png" width="200" height="200"><p>Eyeliner</p></div>
-      <div class="col-2"> <img src="./img7.png" width="200" height="200"><p>Compact</p></div>
+      <div class="col-2"> <img src="./img1.png" width="200" height="200">
+        <p>Bestselling Combos</p>
+      </div>
+      <div class="col-2"> <img src="./img2.png" width="200" height="200">
+        <p>Lipstick</p>
+      </div>
+      <div class="col-2"> <img src="./img3.png" width="200" height="200">
+        <p>Foundation</p>
+      </div>
+      <div class="col-2"> <img src="./img4.png" width="200" height="200">
+        <p>Concealer</p>
+      </div>
+      <div class="col-2"> <img src="./img6.png" width="200" height="200">
+        <p>Eyeliner</p>
+      </div>
+      <div class="col-2"> <img src="./img7.png" width="200" height="200">
+        <p>Compact</p>
+      </div>
 
     </div>
     <div class="row">
       <div class="col">
         <img src="./deals.png" width="1300">
-        </div>
-
-    </div>
-    <div class="row py-3 px-5">
-      <div class="col-2 mx-3"> <img src="./deal1.png" width="200" height="200"><p class="off">Up To 40% Off<p>Free Mascara On 999+</p></p> </div>
-      <div class="col-2 mx-3"> <img src="./deal2.png" width="200" height="200"><p class="off">Up To 40% Off<p>Pick A Free Mini On ₹1199+</p></p></div>
-      <div class="col-2 mx-3"> <img src="./deal3.png" width="200" height="200"><p class="off">Up To 20% Off<p>Free heart Shaped lipstick on ₹850+</p></p></div>
-      <div class="col-2 mx-3"> <img src="./deal4.png" width="200" height="200"><p class="off">Flat 10% Off<p>Free Gift On ₹799 & ₹1299</p></p></div>
-      <div class="col-2 mx-3"> <img src="./deal5.png" width="200" height="200"><p class="off">Up To 50% Off<p>₹1050 Gifts On ₹2000</p></p></div>
-    </div>
-    <div class="row py-3 px-5">
-      <div class="col-2 mx-3"> <img src="./deal6.png" width="200" height="200"><p class="off">Up To 40% Off<p>Free Eyeshadow of ₹599 on ₹1199</p></p> </div>
-      <div class="col-2 mx-3"> <img src="./deal7.png" width="200" height="200"><p class="off">Up To 40% Off<p>On The Entire Range!</p></p></div>
-      <div class="col-2 mx-3"> <img src="./deal8.png" width="200" height="200"><p class="off">Up To 20% Off<p>Free Lipstick Worth ₹799 On ₹899+</p></p></div>
-      <div class="col-2 mx-3"> <img src="./deal9.png" width="200" height="200"><p class="off">Flat 10% Off<p>Free Highlighter On ₹4500</p></p></div>
-      <div class="col-2 mx-3"> <img src="./deal10.png" width="200" height="200"><p class="off">Up To 50% Off<p>Free Lipstick On ₹799</p></p></div>
-    </div>
-
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
-          </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Angular</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">React</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Pricing</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            info@example.com
-          </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-        </div>
-        <!-- Grid column -->
       </div>
-      <!-- Grid row -->
-    </div>
-  </section>
-  <!-- Section: Links  -->
 
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
+    </div>
+    <div class="row py-3 px-5">
+      <div class="col-2 mx-3"> <img src="./deal1.png" width="200" height="200">
+        <p class="off">Up To 40% Off
+        <p>Free Mascara On 999+</p>
+        </p>
+      </div>
+      <div class="col-2 mx-3"> <img src="./deal2.png" width="200" height="200">
+        <p class="off">Up To 40% Off
+        <p>Pick A Free Mini On ₹1199+</p>
+        </p>
+      </div>
+      <div class="col-2 mx-3"> <img src="./deal3.png" width="200" height="200">
+        <p class="off">Up To 20% Off
+        <p>Free heart Shaped lipstick on ₹850+</p>
+        </p>
+      </div>
+      <div class="col-2 mx-3"> <img src="./deal4.png" width="200" height="200">
+        <p class="off">Flat 10% Off
+        <p>Free Gift On ₹799 & ₹1299</p>
+        </p>
+      </div>
+      <div class="col-2 mx-3"> <img src="./deal5.png" width="200" height="200">
+        <p class="off">Up To 50% Off
+        <p>₹1050 Gifts On ₹2000</p>
+        </p>
+      </div>
+    </div>
+    <div class="row py-3 px-5">
+      <div class="col-2 mx-3"> <img src="./deal6.png" width="200" height="200">
+        <p class="off">Up To 40% Off
+        <p>Free Eyeshadow of ₹599 on ₹1199</p>
+        </p>
+      </div>
+      <div class="col-2 mx-3"> <img src="./deal7.png" width="200" height="200">
+        <p class="off">Up To 40% Off
+        <p>On The Entire Range!</p>
+        </p>
+      </div>
+      <div class="col-2 mx-3"> <img src="./deal8.png" width="200" height="200">
+        <p class="off">Up To 20% Off
+        <p>Free Lipstick Worth ₹799 On ₹899+</p>
+        </p>
+      </div>
+      <div class="col-2 mx-3"> <img src="./deal9.png" width="200" height="200">
+        <p class="off">Flat 10% Off
+        <p>Free Highlighter On ₹4500</p>
+        </p>
+      </div>
+      <div class="col-2 mx-3"> <img src="./deal10.png" width="200" height="200">
+        <p class="off">Up To 50% Off
+        <p>Free Lipstick On ₹799</p>
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Company name
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Products
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Angular</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">React</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Vue</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Laravel</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@example.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
   </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script>
   // $("[data-toggle=popover]").popover(
   //   {
@@ -344,12 +433,13 @@ padding-top:7px;
   //     }
   //   }
   // );
-document.getElementById("signInBtn").addEventListener("click",signIn);
-function signIn(){
+  document.getElementById("signInBtn").addEventListener("click", signIn);
+  function signIn() {
 
-  window.location.href="./login.html"; 
-}
- 
+    window.location.href = "./login.html";
+  }
+
 
 </script>
+
 </html>

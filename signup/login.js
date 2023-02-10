@@ -15,6 +15,7 @@ var x=lc.filter(function(elem){
 })
 //console.log(x);
 if(x.length!=0){
+    localStorage.setItem("dataExist",JSON.stringify(x));
 window.location.href="./otp.html"
 }
 else{
