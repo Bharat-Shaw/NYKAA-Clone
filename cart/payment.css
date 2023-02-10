@@ -3130,13 +3130,13 @@ fieldset:disabled .btn {
     border-color: #fc2779
 }
 
-.btn-check:focus+.btn-primary,
+/* .btn-check:focus+.btn-primary,
 .btn-primary:focus {
     color: #fff;
     background-color: #fc2779;
     border-color: #fc2779;
     box-shadow: 0 0 0 .2rem rgba(49, 132, 253, .5)
-}
+} */
 
 .btn-check:active+.btn-primary,
 .btn-check:checked+.btn-primary,

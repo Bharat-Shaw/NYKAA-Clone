@@ -34,6 +34,7 @@
             justify-content: space-between;
             padding: 15px 25% 15px 50px;
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            background-color: rgb(255, 255, 255);
         }
         #cart-nav > div{
             display: flex;
@@ -194,21 +195,21 @@
                       <span class="font-weight-normal card-text">Card Number</span>
                       <div class="input">
                         <i class="fa fa-credit-card"></i>
-                        <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                        <input type="number" class="form-control" placeholder="0000 0000 0000 0000">
                       </div> 
                       <div class="row mt-3 mb-3">
                         <div class="col-md-6">
                           <span class="font-weight-normal card-text">Expiry Date</span>
                           <div class="input">
                             <i class="fa fa-calendar"></i>
-                            <input type="text" class="form-control" placeholder="MM/YY">
+                            <input type="month" class="form-control" placeholder="MM/YY">
                           </div> 
                         </div>
                         <div class="col-md-6">
                           <span class="font-weight-normal card-text">CVC/CVV</span>
                           <div class="input">
                             <i class="fa fa-lock"></i>
-                            <input type="text" class="form-control" placeholder="000">
+                            <input type="password"  class="form-control" placeholder="000">
                           </div> 
                         </div>
                       </div>
@@ -235,7 +236,7 @@
                 <div class="p-3">
                   <div class="d-flex justify-content-between mb-2">
                     <span>Bag Items</span>
-                    <span>0</span>
+                    <span class="bagcount">0</span>
                   </div>
                   <div class="d-flex justify-content-between">
                     <span>Delivery charge <i class="fa fa-clock-o"></i></span>
@@ -245,13 +246,13 @@
                 <hr class="mt-0 line">
                 <div class="p-3 d-flex justify-content-between">
                   <div class="d-flex flex-column">
-                    <span>Today you pay <span class="total-amount">0</span></span>
+                    <span>Today you pay </span>
                     <small>Buy authentic products. Pay securely</small>
                   </div>
-                  <span>₹ <span class="total-amount">0</span></span>
+                  <span>₹ <span class="total-amou">0</span></span>
                 </div>
                 <div class="p-3">
-                <button class="btn btn-primary btn-block free-button">Pay ₹<span class="total-amount">0</span></button> 
+                <button id="pay" class="btn btn-primary btn-block free-button">Pay ₹<span class="total-amo">0</span></button> 
                <div class="text-center">
                  <span>Easy returns and exchange</span>
                </div>
@@ -262,6 +263,14 @@
       </div>
 </body>
 <script>
-
+    document.querySelector("#pay").addEventListener("click", hello);
+    function hello(){
+      window.location.href = "otp.html";
+    }
+    var bag =JSON.parse(localStorage.getItem("total"));
+    document.querySelector(".total-amount").innerHTML= bag;
+    document.querySelector(".bagcount").innerHTML= JSON.parse(localStorage.getItem("bag"));
+    document.querySelector(".total-amou").innerHTML= bag +50;
+    document.querySelector(".total-amo").innerHTML= bag +50;
 </script>
 </html>

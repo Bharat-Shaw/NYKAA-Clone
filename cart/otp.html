@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        body{
+            margin: 0 0 150px 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(68, 67, 67);
+            background-color: rgb(255, 229, 234);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 500px;
+        }
+        .mid{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            /* align-items: center; */
+            height: 500px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin-top: 50px;
+            width: 35%;
+            background-color: rgb(255, 255, 255);
+        }
+        .mid > div{
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            padding-top: 15px;
+            
+        }
+        .mid > div:nth-child(2) > div{
+            padding-left: 30px; 
+            padding-bottom: 10px;
+        }
+        .mid img{
+            width: 40%;
+            /* margin-left: 30px; */
+        }
+        .mid> div:nth-child(1){
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100px;
+        }
+        h3 {
+            color: rgb(68, 68, 248);
+            margin-bottom: 2px;
+        }
+        #logo img{
+            width: 5%;
+        }
+        #logo {
+            margin: auto -87px auto auto;
+        }
+        .mid > div:nth-child(3) > div{
+            padding-left: 30px; 
+        }
+        input{
+            padding: 10px;
+            
+        }
+        button{
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(214, 182, 2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mid">
+        <div>
+            <img src="https://i1.wp.com/zeevector.com/wp-content/uploads/npci-logo-PNG.png?fit=903%2C277&ssl=1" alt="">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+        <div>
+            <div >
+                <span>Merchant &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; <span>: &nbsp; Nykaa E-Retail Priva</span></span>
+            </div>
+            <div >
+                <span>Transaction Amount &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp; &nbsp;₹ &nbsp;<span class="amount"> </span></span>
+            </div>
+            <div >
+                <span>SBI Debit Card &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; <span>: &nbsp; xxxx xxxx xxxx xxxx</span></span>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h3>Authenticate Payment</h3>
+                <p>OTP sent to your registered mobile number</p>
+                <p>Enter One Time Password (OTP)</p>
+                <input type="number" name="otp" id="otp" placeholder="Enter your OTP">
+                <button>Make Payment</button><br>
+                <a href="index.html">Click here to abort transaction and go back to merchant site</a>
+            </div>
+            
+        </div>
+        <!-- <div id="logo"> -->
+            <p id="logo"><img src="https://cdn-icons-png.flaticon.com/128/483/483408.png" alt="">  PCI DSS Certified</p>
+        <!-- </div> -->
+    </div>
+    
+    
+</body>
+<script>
+    var bag =JSON.parse(localStorage.getItem("total"));
+    document.querySelector(".amount").innerHTML= bag;
+</script>
+</html>

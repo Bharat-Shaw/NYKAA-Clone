@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nykaa cart</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
         body{
-            margin: 0;
+            margin: 0 0 150px 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(68, 67, 67);
             background-color: rgb(255, 229, 234);
         }
         #cart-nav hr{
@@ -24,6 +29,7 @@
             justify-content: space-between;
             padding: 15px 25% 15px 50px;
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            background-color: rgb(255, 255, 255);
         }
         #cart-nav > div{
             display: flex;
@@ -55,8 +61,80 @@
         #nodis{
             display: none;
         }
-        
-        
+        #body1{
+            display: flex;
+            justify-content: space-around;
+        }
+        .data {
+            /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+           display: grid;
+           grid-template-columns: auto auto auto;
+           row-gap: 20px;
+           column-gap: 4%;
+           margin: auto 8% auto auto;
+           width: 115vh;
+           /* background-color: aqua; */
+        }
+        .body{
+            text-align: center;
+            margin: 30px;
+        }
+        .data > div{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            padding: 2px;
+            text-align: center;
+            width: 220px;
+            height: 500;
+            background-color: rgb(245, 101, 161);
+            color: antiquewhite;
+            border-radius: 10px;
+            /* padding-bottom: 10px; */
+        }
+        .data > div h5{
+            margin: 8px;
+        }
+        .data > div p{
+            margin: 8px;
+        }
+        .data > div button{
+            width: 80%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+        }
+        #body-mid{
+            /* width: 90%;
+            background-color: aqua; */
+            margin: auto 5%;
+            
+        }
+        #data1 img{
+            width: 100%;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        #none{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            padding: 20px;
+            height: 450px;
+            background-color: rgb(255, 255, 255);
+        }
+        .list-box{
+            display: flex;
+            justify-content: space-around;
+        }
+        .list-box div:nth-child(2) h4{
+            
+            /* padding-bottom: -10px; */
+            margin-top: 10px;
+        }
+        #no-product{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            font-size: 50px;
+        }
     </style>
 </head>
 <body>
@@ -80,36 +158,92 @@
             </div>
         </div>
     </div>
-    <div id="body1">
-        <h4 id="body">Total Number Of Products :- <span></span></h4>
-        <div id="data"></div>
-        <div id="none">
-            <div>
-                <input type="text" placeholder="Enter Code" id="promoCode">
-                <button id="code">Apply Promo</button>
-                <a href="Address.html">Click here to select address</a>
+    <div id="body-mid">
+        <h4 class="body">Total number of Products :- <span></span></h4>
+        <div id="body1">
+            <div id="data1">
+                <div class="data">
+                    <!-- items will be added -->
+                </div>
             </div>
-            <div>
-                <h3>Price details</h3>
-                <p><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg" alt=""> Bag MRP <span></span></p>
-                <p>Bag items <span></span></p>
-                <p>Shipping charge<span></span></p>
-                <p>Total<span></span></p>
+            
+            <div id="none">
+                <div>
+                    <input type="text" placeholder="Enter Code" id="promoCode">
+                    <button id="code">Apply Promo</button><br>
+                </div>
+                <!-- <div>
+                    <h3>Price details</h3>
+                    <div class="list-box">
+                        <div >
+                            <p><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg" alt=""> Bag MRP <span></span></p>
+                            <p>Bag items <span></span></p>
+                            <p>Shipping charge<span></span></p>
+                            <p>Total<span></span></p>
+                        </div>
+                        <div>
+                            <h4 class="mrp">:<span>mrp</span></h4>
+                            <h4 class="count">:<span></span></h4>
+                            <h4 class="shipping">:<span>50</span></h4>
+                            <h4 class="total">:<span>to</span></h4>
+                        </div>
+                    </div>
+                    <a href="Address.html">Click here to select address</a>
+                </div> -->
+                <div class="card">
+                    <div class="d-flex justify-content-between p-3">
+                      <div class="d-flex flex-column">
+                        <span>Total cart bill </span>
+                        <!-- <a href="#" class="billing">Total cart bill</a> -->
+                      </div>
+                      <div class="mt-1">
+                        <!-- <sup class="super-price"><span class="total-amount">0</span></sup> -->
+                        <span class="total-amount">0</span>
+                      </div>
+                    </div>
+                    <hr class="mt-0 line">
+                    <div class="p-3">
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>Bag Items</span>
+                        <span class="count"><span></span></span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <span>Delivery charge <i class="fa fa-clock-o"></i></span>
+                        <span>₹50</span>
+                      </div>
+                    </div>
+                    <hr class="mt-0 line">
+                    <div class="p-3 d-flex justify-content-between">
+                      <div class="d-flex flex-column">
+                        <span>Today you pay </span>
+                        <small>Buy authentic products. Pay securely</small>
+                      </div>
+                      <span>₹ <span class="total-amou">0</span></span>
+                    </div>
+                    <div class="p-3">
+                    <button id="pay" class="btn btn-primary btn-block free-button">Pay ₹<span class="total-amo">0</span></button> 
+                   <div class="text-center">
+                     <span>Easy returns and exchange</span>
+                   </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
+    <div id="no-product"></div>
 </body>
 <script>
-    window.addEventListener("load", (event) => {
-        console.log("page is fully loaded");
-        document.getElementById("cart-img").src = "https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg"; 
-    });
-
-    var items = JSON.parse(localStorage.getItem("cart")) || [];
+    // window.addEventListener("load", (event) => {
+    //     console.log("page is fully loaded");
+    //     document.getElementById("cart-img").src = "https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg"; 
+    // });
+        var flag=true;
+    var items = JSON.parse(localStorage.getItem("cart-list")) || [];
     if (items.length === 0) {
-        document.getElementById("body").textContent = "No Products";
-        document.getElementById("body").setAttribute("class", "noproduct");
-        document.getElementById("none").setAttribute("id", "nodis");
+        document.querySelector("#body-mid").setAttribute("id", "nodis");
+        document.getElementById("no-product").textContent = "No Products";
+       
+        console.log("hello")
     } else {
         displayItems();
         totalPrice();
@@ -118,10 +252,10 @@
 
 
     function displayItems() {
-        document.getElementById("data").textContent = "";
+        document.querySelector(".data").textContent = "";
         items.forEach(function (elm, idx) {
+            var div1 = document.createElement("div");
             var div = document.createElement("div");
-            div.setAttribute("class", "mainBox");
 
             var image = document.createElement("img");
             image.setAttribute("src",elm.image_url);
@@ -130,64 +264,73 @@
             name.textContent = elm.name;
 
             var price = document.createElement("p");
-            price.textContent = "₹ " + elm.price;
+            price.textContent = "MRP ₹ - " + elm.price;
 
             div.append(image, name, price);
 
             var button = document.createElement("button");
-            button.textContent = "Delete";
+            button.textContent = "Remove item";
             button.addEventListener("click", function () {
                 deleteProduct(idx);
             });
-            document.getElementById("data").append(div, button);
+            div1.append(div, button);
+            document.querySelector(".data").append(div1);
+            
         });
+        if(items.length==0){
+            location. reload();
+        }
     }
 
     function deleteProduct(index) {  
         items.splice(index, 1);
-        localStorage.setItem("cart",JSON.stringify(items));
+        localStorage.setItem("cart-list",JSON.stringify(items));
         var length = items.length;
         
         displayItems();
         totalPrice();
         updatItem();
+        flag=true;
     }
 
     function totalPrice() {
         var totalPrice = items.reduce(function (acc, curr) {
             return acc + parseInt(curr.price);
         }, 0);
-
-        var div = document.createElement("div");
-        div.setAttribute("id", "totalprice");
-
-        var cartValue = document.createElement("h3");
-        cartValue.textContent = "Total Value";
-
-        var price = document.createElement("h4");
-        price.textContent = totalPrice;
-        price.setAttribute("id","finalValue");
-        // console.log(price.value);
-
-        div.append(cartValue, price);
-        document.getElementById("data").append(div);
+        localStorage.setItem("total" , JSON.stringify(totalPrice));
+        document.querySelector(".total-amount").textContent=totalPrice;
+        document.querySelector(".total-amou").textContent=totalPrice + 50;
+        document.querySelector(".total-amo").textContent=totalPrice + 50;
     }
 
     function updatItem(){
-        var arr = JSON.parse(localStorage.getItem("cart"));
+        var arr = JSON.parse(localStorage.getItem("cart-list"));
         var length = arr.length;
-        document.querySelector("span").textContent = length;
+        localStorage.setItem("bag" , JSON.stringify(length));
+        document.querySelector(".body span").textContent = length;
+        document.querySelector(".count span").textContent = length;
     }
 
     document.getElementById("code").addEventListener("click",finalValue);
     function finalValue(){
         var codeVal = document.getElementById("promoCode").value;
         if(codeVal === "nykaa30"){
-            var finalVal = document.getElementById("finalValue").textContent;
+            var finalVal = document.querySelector(".total-amount").textContent;
             var lesspromo = parseInt(finalVal-(finalVal)*30/100);
-            document.getElementById("finalValue").textContent = lesspromo;
-
+            // document.getElementById("finalValue").textContent = lesspromo;
+            if(flag){
+                localStorage.setItem("total" , JSON.stringify(lesspromo));
+            document.querySelector(".total-amount").textContent=lesspromo;
+            document.querySelector(".total-amou").textContent=lesspromo + 50;
+        document.querySelector(".total-amo").textContent=lesspromo + 50;
+        flag=false;
+        alert("Promo code applied successfully");
+    }
         }
+    }
+    document.getElementById("pay").addEventListener("click" , redirect);
+    function redirect(){
+        window.location.href = "address.html";
     }
 </script>
 
