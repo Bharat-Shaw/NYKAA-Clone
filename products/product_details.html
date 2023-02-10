@@ -132,6 +132,7 @@
             justify-content: space-around;
             align-items: flex-start;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 65%;
         }
 
         #left>div {
@@ -151,7 +152,7 @@
             width: 300px;
         }
 
-        #submit {
+        #button1 {
             color: white;
             background-color: #fc2779;
             border: none;
@@ -173,6 +174,7 @@
             align-items: center;
             margin-left: 3px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width : 65%;
         }
 
         #up {
@@ -199,13 +201,11 @@
 
         #mid>div {
             display: flex;
+            justify-content: center;
+            margin : auto;
             margin: 10px;
+            padding-left: 55px;
         }
-
-        #mid>div>div {
-            margin-bottom: -10px;
-        }
-
         #mid>div:nth-child(2) {
             display: block;
         }
@@ -220,23 +220,26 @@
             display: flex;
             background-color: rgb(243, 243, 243);
             width: 100%;
-            margin-top: 111px;
+            margin-top:53px;
         }
 
         #bottom>div {
             display: flex;
             font-weight: bold;
-            font-size: x-small;
+            font-size: small;
             color: rgba(0, 19, 37, 0.72);
-            margin-left: 15px;
+            margin-left: 5px;
         }
 
         #bottom>div>div {
             display: flex;
             align-items: center;
             margin: 5px;
+            margin-right: 5px;
         }
-
+        #bottom>div>div>p{
+            margin-top: 10px;
+        }
         .footer button {
             border: none;
             padding: 10px;
@@ -380,8 +383,7 @@
             <img src="https://images-static.nykaa.com/uploads/5c7b7cb8-1aef-45ae-b9c3-6e1d1335a7d3.jpg?tr=w-1200,cm-pad_resize"
                 alt="sale">
         </div>
-        <div><a href="product.html"><button id="back"><i
-                        class="fa-solid fa-arrow-left"></i></button></a></div>
+        <div><a href="product.html"><button id="back"><i class="fa-solid fa-arrow-left"></i></button></a></div>
         <div id="parent">
             <div id="left">
                 <div id="smallimages">
@@ -411,18 +413,7 @@
                 </div>
                 <div id="mid">
                     <div>
-                        <button id="submit" type="submit">Add to Bag</button>
-                    </div>
-                    <div>
-                        <div id="del">
-                            <div><i class="fa-sharp fa-solid fa-location-dot"></i></div>
-                            <div>
-                                <p>Delivery Options</p>
-                            </div>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Enter Pincode">
-                        </div>
+                        <button id="button1" type="button">Add to Bag</button>
                     </div>
                 </div>
                 <div id="bottom">
@@ -448,8 +439,7 @@
             id: 1,
             url: "https://images-static.nykaa.com/media/catalog/product/b/e/be291e58906009451084_1.jpg",
             name: "Biotique Morning Nectar Nourish & Hydrate Moisturizer",
-            price: "MRP ₹215"
-
+            price: 215
         },
         {
             id: 2,
@@ -477,9 +467,7 @@
         diplayImage(3)
     });
 
-    document.querySelector("button").addEventListener("click", function () {
-        addToCart();
-    });
+    document.getElementById("button1").addEventListener("click", addToCart);
 
     cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
     function addToCart() {

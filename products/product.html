@@ -359,7 +359,7 @@
 
                 </ul>
 
-                <input class="form-control mr-sm-2 align-right" type="search" placeholder="Search on Nykaa"
+                <input class="form-control mr-sm-2 align-right" type="search" id="search" placeholder="Search on Nykaa"
                     aria-label="Search">
                 <!-- <button class="btn btn-outline-success mx-3 my-2 my-sm-0 px-3" data-toggle="tooltip" data-placement="bottom"><b>Sign In</b>
             </button> -->
@@ -706,6 +706,7 @@
             gender: "female"
         }
     ];
+    document.getElementById("search").addEventListener("search", getProduct);
     document.getElementById("brands").addEventListener("change", filterBrand);
     document.getElementById("gender").addEventListener("change", filterGender);
     document.getElementById("sorting").addEventListener("change", sortItems);
@@ -795,6 +796,67 @@
             document.getElementById("data").innerHTML = "";
             displayProducts(products);
         }
+    }
+    function getProduct(){
+        var item = document.getElementById("search").value;
+        var itemList = "";
+
+        if(item == "lakme"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "kay beauty"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "biotique"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "mamaearth"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "colorbar"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "wildstone"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "beardo"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "dot & key"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "nykaa"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "etude"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        else if(item == "colorbar"){
+            itemList = products.filter(function(el){
+                if(el.brand == item) return el;
+            });
+        }
+        displayProducts(itemList);
     }
 
 </script>
