@@ -442,21 +442,21 @@
   // function navigation(){
   //   console.log(event.target);
   // }
-  function clickOut(){
-    document.getElementById("signInBtn").style.display = "block";
+//   function clickOut(){
+//     document.getElementById("signInBtn").style.display = "block";
 
-document.getElementById("signOutBtn").style.display = "none";
-  }
-  var lc=JSON.parse(localStorage.getItem("signInData")) || [];
-  if(lc.length==0){
-    document.getElementById("signInBtn").style.display = "block";
+// document.getElementById("signOutBtn").style.display = "none";
+//   }
+//   var lc=JSON.parse(localStorage.getItem("signInData")) || [];
+//   if(lc.length==0){
+//     document.getElementById("signInBtn").style.display = "block";
 
-document.getElementById("signOutBtn").style.display = "none";}
-else{
-  document.getElementById("signInBtn").style.display = "none";
+// document.getElementById("signOutBtn").style.display = "none";}
+// else{
+//   document.getElementById("signInBtn").style.display = "none";
 
-document.getElementById("signOutBtn").style.display = "block";
-}
+// document.getElementById("signOutBtn").style.display = "block";
+// }
   document.getElementById("signInBtn").addEventListener("click", signIn);
   function signIn() {
 
