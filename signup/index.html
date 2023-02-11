@@ -157,9 +157,13 @@
         <!-- <button class="btn btn-outline-success mx-3 my-2 my-sm-0 px-3" data-toggle="tooltip" data-placement="bottom"><b>Sign In</b>
         </button> -->
         <button type="button" id="signInBtn" class="btn btn-secondary mx-3 my-2 my-sm-0 px-3" data-html="true"
-          data-container="body" data-toggle="popover" data-placement="bottom">
+          data-container="body" data-toggle="popover" data-placement="bottom" style="display:block">
           Sign In
         </button>
+        <button type="button" onclick="clickOut()" id="signOutBtn" class="btn btn-secondary mx-3 my-2 my-sm-0 px-3" data-html="true"
+        data-container="body" data-toggle="popover" data-placement="bottom" style="display:none">
+        Sign Out
+      </button>
         <a href="cart.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"
             viewBox="0 0 16 16">
             <path
@@ -438,7 +442,21 @@
   // function navigation(){
   //   console.log(event.target);
   // }
-  
+  function clickOut(){
+    document.getElementById("signInBtn").style.display = "block";
+
+document.getElementById("signOutBtn").style.display = "none";
+  }
+  var lc=JSON.parse(localStorage.getItem("signInData")) || [];
+  if(lc.length==0){
+    document.getElementById("signInBtn").style.display = "block";
+
+document.getElementById("signOutBtn").style.display = "none";}
+else{
+  document.getElementById("signInBtn").style.display = "none";
+
+document.getElementById("signOutBtn").style.display = "block";
+}
   document.getElementById("signInBtn").addEventListener("click", signIn);
   function signIn() {
 
