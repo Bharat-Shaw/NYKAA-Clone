@@ -344,7 +344,11 @@
     }
     document.getElementById("pay").addEventListener("click" , redirect);
     function redirect(){
-        window.location.href = "address.html";
+        if(JSON.parse(localStorage.getItem("userData")) == null) {
+            window.location.href = "login.html";
+        }else{
+            window.location.href = "address.html";
+        }
     }
 </script>
 
